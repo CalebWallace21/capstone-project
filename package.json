@@ -2,7 +2,7 @@
   "name": "capstone-project",
   "version": "0.1.0",
   "main": "server/index.js",
-  "proxy": "http://localhost:4001",
+  "proxy": "http://localhost:4001/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

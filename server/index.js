@@ -10,6 +10,7 @@ const {Team} = require('./models/team')
 const {Roster} = require('./models/roster')
 const {Champion} = require('./models/champion')
 const {getChampions, selectChampion, editName, deleteChampion} = require('./controllers/championController')
+const {getCurrentUserTeams, addTeam, deleteTeam} = require('./controllers/teamController')
 const {getAllChampions} = require('./controllers/apiController')
 const {login, register} = require('./controllers/auth')
 const {isAuthenticated} = require(`./middleware/isAuthorized`)
@@ -38,9 +39,11 @@ app.post("/api/selectChamp", selectChampion);
 app.put("/api/selectChamp/:id", editName);
 app.delete("/api/selectChamp/:id", deleteChampion);
 
-// app.post(`/posts`, isAuthenticated, addTeam)
-// app.delete(`/posts/:id`, isAuthenticated, deleteTeam)
+app.get('/userteams/:userId', getCurrentUserTeams)
+app.post(`/teams`, isAuthenticated, addTeam)
+app.delete(`/teams/:id`, isAuthenticated, deleteTeam)
 
+// sequelize.sync({ force: true })
 sequelize.sync()
     .then(() => {
         app.listen(SERVER_PORT, () => console.log (`Server is up on port ${SERVER_PORT}`))

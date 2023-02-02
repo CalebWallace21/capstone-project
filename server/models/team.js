@@ -9,7 +9,15 @@ module.exports = {
             allowNull: false,
             primaryKey: true
         },
-        name: DataTypes.STRING,
-        
+        champ1: DataTypes.STRING,
+        champ2: DataTypes.STRING,
+        champ3: DataTypes.STRING,
+        champ4: DataTypes.STRING,
+        champ5: DataTypes.STRING,
+        champ1_Img: DataTypes.STRING,
+        champ2_Img: DataTypes.STRING,
+        champ3_Img: DataTypes.STRING,
+        champ4_Img: DataTypes.STRING,
+        champ5_Img: DataTypes.STRING,
     })
 }

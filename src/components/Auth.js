@@ -29,8 +29,8 @@ const Auth = () => {
    }
  
    return (
-       <main>
-           <h1>Welcome!</h1>
+       <main className ="auth-page">
+           <h1 className="auth-title">Welcome!</h1>
            <form className='form auth-form' onSubmit={submitHandler}>
                <input
                     type='text'
@@ -41,7 +41,7 @@ const Auth = () => {
                 />
 
                <input
-                    type='text'
+                    type='password'
                     placeholder='Password'
                     value={password}
                     onChange={elem => setPassword(elem.target.value)}

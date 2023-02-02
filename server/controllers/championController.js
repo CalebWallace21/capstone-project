@@ -6,8 +6,7 @@ module.exports = {
         res.status(200).send(champions)
     },
     selectChampion: (req, res) => {
-        const {champion} = req.body;
-
+        const champion = req.body;
         champion.id=id;
         id++;
         if(champions.length < 5){
@@ -29,11 +28,10 @@ module.exports = {
         res.status(200).send(champions)
     },
     deleteChampion: (req, res) => {
+        console.log(champions)
         const {id} = req.params
-
         const index = champions.findIndex(e => e.id == id);
         champions.splice(index, 1)
-        
         res.status(200).send(champions)
     }
 }
