@@ -66,7 +66,7 @@ const Profile = () => {
                 {
                     userId === team.userId &&
                     <div>
-                        <button className='form-btn' onClick={() => deleteTeam(team.id)}>
+                        <button className='auth-delete-btn' onClick={() => deleteTeam(team.id)}>
                             Delete Team
                         </button>
                     </div>

@@ -30,7 +30,8 @@ const Auth = () => {
  
    return (
        <main className ="auth-page">
-           <h1 className="auth-title">Welcome!</h1>
+           <h1 className="auth-title">Greetings Summoner!</h1>
+           <h1 className="auth-title">Register or Sign in Below</h1>
            <form className='form auth-form' onSubmit={submitHandler}>
                <input
                     type='text'

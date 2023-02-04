@@ -51,8 +51,8 @@ const ChampSelect = (props) => {
       }
 
     return(
-        <div className="champions">
-            
+        <div >
+            <section className="champions">
             {championChoice.map(champ => (
                 <div className="champ-choice" key={champ.id}>
                     <img src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${champ.key}.png`} onClick={() => {
@@ -64,8 +64,8 @@ const ChampSelect = (props) => {
                     }}  />
                 </div>
             ))}
-            
-            <section>
+            </section>
+            <section className="selected-roster">
             <div>
             <TeamRoster
              champions={champions}
@@ -77,18 +77,23 @@ const ChampSelect = (props) => {
                 {champions.map((champ, i) => (
                     <div className="roster-img">
                         <div>
-                            <button
+                            <button className="delete-btn"
                             onClick={() => {console.log(champ.id); deleteChampion(i)}}
                             >Delete</button>
                         </div>
                     {champ.name}
                     <img src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${champ.key}.png`} />
+
                     </div>
                 ))}
+
             </div>
+            <div>
+                <AddTeam 
+                champions={champions}/>
+                </div>
             </section>
-            <AddTeam 
-            champions={champions}/>
+
     </div>
     )
 }

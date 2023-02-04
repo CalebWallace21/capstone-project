@@ -7,7 +7,7 @@ import '../App.css'
 
 const Header = () => {
     const authCtx = useContext(AuthContext)
-
+    
     return (
         <header className='nav'>
             <nav>
@@ -21,6 +21,7 @@ const Header = () => {
                             <li>
                                 <NavLink to='/profile'>Saved Teams</NavLink>
                             </li>
+
                             <li>
                                 <button className='logout-btn' onClick={() => authCtx.logout()}>Logout</button>
                             </li>
