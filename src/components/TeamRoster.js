@@ -1,11 +1,9 @@
-import {useState, useEffect, useContext} from 'react'
-import axios from 'axios';
-import ChampSelect from './ChampSelect'
+
 import EditRoster from './EditRoster'
 import '../App.css';
 
 const TeamRoster = ({champions, editName, deleteChampion}) => {
-console.log(champions)
+
     const mapChampions = champions.map((champion, i) => {
         return (
         <div key ={i}>

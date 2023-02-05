@@ -41,27 +41,27 @@ const Profile = () => {
 
                 <div className="saved-champ">
                 <p>{team.champ1}</p>
-                <img src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${team.champ1_Img}.png`} />
+                <img src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${team.champ1_Img}.png`} alt="champ1" />
                 </div>
 
                 <div className="saved-champ">
                 <p>{team.champ2}</p>
-                <img src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${team.champ2_Img}.png`} />
+                <img src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${team.champ2_Img}.png`} alt="champ2"/>
                 </div>
 
                 <div className="saved-champ">
                 <p>{team.champ3}</p>
-                <img src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${team.champ3_Img}.png`} />
+                <img src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${team.champ3_Img}.png`} alt="champ3" />
                 </div>
 
                 <div className="saved-champ">
                 <p>{team.champ4}</p>
-                <img src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${team.champ4_Img}.png`} />
+                <img src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${team.champ4_Img}.png`} alt="champ4"/>
                 </div>
 
                 <div className="saved-champ">
                 <p>{team.champ5}</p>
-                <img src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${team.champ5_Img}.png`} />
+                <img src={`https://raw.communitydragon.org/latest/plugins/rcp-be-lol-game-data/global/default/v1/champion-icons/${team.champ5_Img}.png`} alt="champ5" />
                 </div>
                 {
                     userId === team.userId &&
@@ -82,8 +82,8 @@ const Profile = () => {
             {mappedTeams}
         </main>
     ) : (
-        <main>
-            <h1>You have no teams!</h1>
+        <main className="no-teams">
+            <h1>You have no saved teams!</h1>
         </main>
     )
 }

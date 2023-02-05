@@ -233,3 +233,7 @@ button:hover {
   margin-bottom: 10px;
   box-shadow: 1px 1px 10px #0AC8B9;
 }
+.no-teams {
+  color: #C89B3C;
+  text-align: center;
+}

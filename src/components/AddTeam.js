@@ -1,14 +1,13 @@
-import {useState, useContext} from 'react'
+import {useContext} from 'react'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
-
 import AuthContext from '../store/authContext'
 
 const AddTeam = (champions) => {
     const {token, userId} = useContext(AuthContext)
     const navigate = useNavigate()
 
-    console.log(champions)
+    
     
     const handleSubmit = () => {
         axios.post('/teams', {champions, userId}, {
@@ -17,7 +16,6 @@ const AddTeam = (champions) => {
             }
         })
         .then(() => {
-            // console.log(name)
             navigate('/profile')
         })
         .catch(err => console.log(err))

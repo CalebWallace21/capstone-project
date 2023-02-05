@@ -27,10 +27,10 @@ module.exports = {
                         exp
                     })
                 } else {
-                    res.status(400).send('Password Incorrect')
+                    res.status(400).send('Incorrect Username or Password')
                 }
             } else {
-                res.status(400).send('There is no user with that Username')
+                res.status(400).send('Incorrect Username or Password')
             }
         } catch(error) {
             console.log('There is an error in the login function')
