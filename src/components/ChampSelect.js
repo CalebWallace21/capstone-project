@@ -62,7 +62,7 @@ const ChampSelect = (props) => {
                     <div className="roster-img">
                         <div>
                             <button className="delete-btn"
-                            onClick={() => {console.log(champ.id); deleteChampion(i)}}
+                            onClick={() => {deleteChampion(i)}}
                             >Delete</button>
                         </div>
                     {champ.name}

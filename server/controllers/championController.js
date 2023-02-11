@@ -1,5 +1,5 @@
 let champions = [];
-let id = 0;
+let champid = 0;
 
 module.exports = {
     getChampions: (req, res) => {
@@ -7,8 +7,14 @@ module.exports = {
     },
     selectChampion: (req, res) => {
         const champion = req.body;
-        champion.id=id;
-        id++;
+        champion.id=champid;
+        if(champid < 4){
+        champid++
+        }
+        else {
+            champid--
+        }
+        
         if(champions.length < 5){
             champions.push(champion);
             res.status(200).send(champions)
@@ -28,10 +34,8 @@ module.exports = {
         res.status(200).send(champions)
     },
     deleteChampion: (req, res) => {
-        console.log(champions)
         const {id} = req.params
-        const index = champions.findIndex(e => e.id == id);
-        champions.splice(index, 1)
+        champions.splice(id, 1)
         res.status(200).send(champions)
     }
 }
