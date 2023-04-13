@@ -3,7 +3,7 @@ const express = require(`express`)
 const cors = require(`cors`)
 const {sequelize} = require(`./util/database`)
 
-const {SERVER_PORT} = process.env
+// const {SERVER_PORT} = process.env
 
 const {User} = require(`./models/user`)
 const {Team} = require('./models/team')
@@ -44,8 +44,13 @@ app.post(`/teams`, isAuthenticated, addTeam)
 app.delete(`/teams/:id`, isAuthenticated, deleteTeam)
 
 // sequelize.sync({ force: true })
+// sequelize.sync()
+//     .then(() => {
+//         app.listen(SERVER_PORT, () => console.log (`Server is up on port ${SERVER_PORT}`))
+//     })
+//     .catch(err => console.log(err))
 sequelize.sync()
     .then(() => {
-        app.listen(SERVER_PORT, () => console.log (`Server is up on port ${SERVER_PORT}`))
+        app.listen(4001, () => console.log (`Server is up on port 4001`))
     })
     .catch(err => console.log(err))
